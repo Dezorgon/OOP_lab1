@@ -1,21 +1,13 @@
 package Vegetables.Modeles;
 
 public abstract class Vegetable {
-    private int calorie;
-    private int weight;
+    private final int weight;
 
-    public int getCalorie() {
-        return calorie;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-    public void setCalorie(int calorie) {
-        this.calorie = calorie;
-    }
-
-    public void setWeight(int weight) {
+    public Vegetable(int weight){
         this.weight = weight;
     }
+
+    public abstract int getCalorie();
+    public abstract int getCaloriePer100gram();
+    public int getWeight() { return weight; }
 }
